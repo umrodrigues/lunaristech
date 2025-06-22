@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="contato">
       <div className={styles.inner}>
         <h2 className={styles.logo}>LunaristTech</h2>
         <p className={styles.tagline}>Transformando ideias em soluções digitais inovadoras.</p>

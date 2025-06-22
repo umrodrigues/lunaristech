@@ -22,7 +22,7 @@ const iconMap: Record<string, IconType> = {
 
 export default function WorkSection() {
   return (
-    <section className={styles.workSection}>
+    <section id="portifolio" className={styles.workSection}>
       <h2>Conheça os nossos projetos</h2>
       <div className={styles.cardsContainer}>
         {workMock.map(({ id, title, description, image, techIcons, link }) => (

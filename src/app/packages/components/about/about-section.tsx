@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutSection() {
   return (
-    <section className={styles.aboutSection}>
+    <section className={styles.aboutSection} id="empresa">
       <motion.div
         className={styles.iconWrapper}
         initial={{ opacity: 0, scale: 0.8 }}
