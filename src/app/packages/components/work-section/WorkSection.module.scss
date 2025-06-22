@@ -27,6 +27,7 @@
   display: flex;
   flex-direction: column;
   animation: float 10s ease-in-out infinite;
+  height: 100%;
 }
 
 @keyframes float {
@@ -52,6 +53,9 @@
 .details {
   padding: 1.5rem;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 
   h3 {
     font-size: 1.3rem;
@@ -83,14 +87,18 @@
 }
 
 .link {
-  display: inline-block;
-  padding: 0.6rem 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  padding: 0 1.4rem;
   background-color: #8b5cf6;
   color: white;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s;
+  margin-top: auto;
 
   &:hover {
     background-color: #a78bfa;

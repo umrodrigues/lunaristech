@@ -19,7 +19,14 @@ export default function HeroSection() {
           PARA O FUTURO
         </h1>
         <p>Transformando ideias em soluções digitais</p>
-        <button className={styles.button}>SAIBA MAIS</button>
+        <a
+          href="https://api.whatsapp.com/send?phone=5551997791996"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.button}
+        >
+          SAIBA MAIS
+        </a>
       </div>
     </section>
   );

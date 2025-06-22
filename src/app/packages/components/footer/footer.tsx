@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './Footer.module.scss';
-import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -11,14 +11,14 @@ export default function Footer() {
         <h2 className={styles.logo}>LunaristTech</h2>
         <p className={styles.tagline}>Transformando ideias em soluções digitais inovadoras.</p>
         <div className={styles.socials}>
-          <Link href="https://instagram.com" target="_blank">
+          <Link href="https://www.instagram.com/lunaris.tech/" target="_blank">
             <FaInstagram size={24} />
           </Link>
-          <Link href="https://linkedin.com" target="_blank">
+          <Link href="https://www.linkedin.com/company/lunaris-tech/?viewAsMember=true" target="_blank">
             <FaLinkedin size={24} />
           </Link>
-          <Link href="https://github.com" target="_blank">
-            <FaGithub size={24} />
+          <Link href="https://api.whatsapp.com/send?phone=5551997791996" target="_blank">
+            <FaWhatsapp size={24} />
           </Link>
         </div>
         <p className={styles.copy}>© {new Date().getFullYear()} LunaristTech. Todos os direitos reservados.</p>

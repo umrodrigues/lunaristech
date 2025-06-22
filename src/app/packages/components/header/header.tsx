@@ -22,7 +22,7 @@ export default function Header() {
           <span>|</span>
           <Link href="#servicos">Serviços</Link>
           <span>|</span>
-          <Link href="#blog">Blog</Link>
+          <Link href="#portifolio">Portifólio</Link>
           <span>|</span>
           <Link href="#contato">Contato</Link>
         </nav>
@@ -46,7 +46,7 @@ export default function Header() {
           >
             <Link href="#empresa" onClick={() => setMenuOpen(false)}>Empresa</Link>
             <Link href="#servicos" onClick={() => setMenuOpen(false)}>Serviços</Link>
-            <Link href="#blog" onClick={() => setMenuOpen(false)}>Blog</Link>
+            <Link href="#portifolio" onClick={() => setMenuOpen(false)}>Portifólio</Link>
             <Link href="#contato" onClick={() => setMenuOpen(false)}>Contato</Link>
           </motion.div>
         )}

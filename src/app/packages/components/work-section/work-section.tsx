@@ -9,8 +9,6 @@ import { workMock } from './__mocks__/workMock';
 
 import type { IconType } from 'react-icons';
 
-type IconName = keyof typeof iconMap;
-
 const iconMap: Record<string, IconType> = {
   FaReact,
   FaNodeJs,
