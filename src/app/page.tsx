@@ -5,6 +5,8 @@ import WorkSection from './packages/components/work-section/work-section';
 import ServicesSection from './packages/components/services-section/services-section';
 import './packages/ui/styles/globals.scss';
 import Footer from './packages/components/footer/footer';
+import { GoToWhatsapp } from './packages/components/go-to-whatsapp/go-to-whatsapp';
+import { BackToTopButton } from './packages/components/back-to-top/back-to-top-button';
 export default function Home() {
   return (
     <>
@@ -14,6 +16,8 @@ export default function Home() {
     <ServicesSection/>
     <WorkSection/>
     <Footer />
+    <GoToWhatsapp />
+    <BackToTopButton />
     </>
 
   );
