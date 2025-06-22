@@ -1,0 +1,36 @@
+.aboutSection {
+  background: linear-gradient(135deg, #0f0f1a, #1c1c2a);
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+
+  .iconWrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8b5cf6;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 20px #8b5cf6;
+    margin: 0 auto 1.5rem;
+
+    svg {
+      color: white;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #d4d4ff;
+    line-height: 1.7;
+  }
+}
