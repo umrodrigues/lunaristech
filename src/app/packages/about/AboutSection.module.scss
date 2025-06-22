@@ -1,0 +1,35 @@
+.aboutSection {
+  background: #f5f7fa;
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #13131f;
+
+  .iconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c3b6c;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+
+    svg {
+      color: white;
+    }
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #1c3b6c;
+  }
+
+  p {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+  }
+}
