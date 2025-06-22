@@ -1,3 +1,10 @@
+export const metadata = {
+  title: 'LunaristTech',
+  description: 'Tecnologia e inovação sob medida.',
+  icons: {
+    icon: '/favicon.ico',  
+  },
+};
 
 export default function RootLayout({
   children,
@@ -6,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
