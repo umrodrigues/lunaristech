@@ -2,7 +2,7 @@ import Script from 'next/script';
 import GoogleAnalyticsRouter from './packages/ui/analytics/analytics-router';
 
 export const metadata = {
-  title: 'LunaristTech',
+  title: 'Lunaris Tech',
   description: 'Tecnologia e inovação sob medida.',
   icons: {
     icon: '/favicon.ico',

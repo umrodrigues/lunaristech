@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer} id="contato">
       <div className={styles.inner}>
-        <h2 className={styles.logo}>LunaristTech</h2>
+        <h2 className={styles.logo}>Lunaris Tech</h2>
         <p className={styles.tagline}>Transformando ideias em soluções digitais inovadoras.</p>
         <div className={styles.socials}>
           <Link href="https://www.instagram.com/lunaris.tech/" target="_blank">
@@ -21,7 +21,7 @@ export default function Footer() {
             <FaWhatsapp size={24} />
           </Link>
         </div>
-        <p className={styles.copy}>© {new Date().getFullYear()} LunaristTech. Todos os direitos reservados.</p>
+        <p className={styles.copy}>© {new Date().getFullYear()} Lunaris Tech. Todos os direitos reservados.</p>
       </div>
     </footer>
   );

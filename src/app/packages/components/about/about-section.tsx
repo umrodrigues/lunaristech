@@ -27,7 +27,7 @@ export default function AboutSection() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        Somos a LunaristTech — apaixonados por tecnologia e inovação. Transformamos ideias em soluções digitais com excelência, agilidade e impacto.
+        Somos a Lunaris Tech — apaixonados por tecnologia e inovação. Transformamos ideias em soluções digitais com excelência, agilidade e impacto.
       </motion.p>
     </section>
   );
