@@ -1,0 +1,210 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.space-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stars {
+  background: #000 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="100" cy="100" r="1" fill="white"/><circle cx="300" cy="200" r="0.5" fill="white"/><circle cx="500" cy="150" r="1.5" fill="white"/><circle cx="700" cy="300" r="0.8" fill="white"/><circle cx="900" cy="100" r="1" fill="white"/><circle cx="200" cy="400" r="0.6" fill="white"/><circle cx="400" cy="500" r="1.2" fill="white"/><circle cx="600" cy="450" r="0.9" fill="white"/><circle cx="800" cy="600" r="1.1" fill="white"/><circle cx="50" cy="700" r="0.7" fill="white"/><circle cx="250" cy="800" r="1.3" fill="white"/><circle cx="450" cy="750" r="0.8" fill="white"/><circle cx="650" cy="900" r="1" fill="white"/><circle cx="850" cy="850" r="0.6" fill="white"/></svg>') repeat top center;
+  animation: move-stars 20s linear infinite;
+}
+
+.twinkling {
+  background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="150" cy="150" r="2" fill="white" opacity="0.8"/><circle cx="350" cy="250" r="1.5" fill="white" opacity="0.6"/><circle cx="550" cy="200" r="2.5" fill="white" opacity="0.9"/><circle cx="750" cy="350" r="1.8" fill="white" opacity="0.7"/><circle cx="950" cy="150" r="2.2" fill="white" opacity="0.8"/><circle cx="250" cy="450" r="1.6" fill="white" opacity="0.5"/><circle cx="450" cy="550" r="2.8" fill="white" opacity="0.9"/><circle cx="650" cy="500" r="1.9" fill="white" opacity="0.6"/><circle cx="850" cy="650" r="2.1" fill="white" opacity="0.8"/><circle cx="100" cy="750" r="1.7" fill="white" opacity="0.7"/><circle cx="300" cy="850" r="2.3" fill="white" opacity="0.9"/><circle cx="500" cy="800" r="1.8" fill="white" opacity="0.6"/><circle cx="700" cy="950" r="2.4" fill="white" opacity="0.8"/><circle cx="900" cy="900" r="1.6" fill="white" opacity="0.5"/></svg>') repeat top center;
+  animation: twinkle 3s ease-in-out infinite alternate;
+}
+
+.clouds {
+  background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><ellipse cx="200" cy="200" rx="80" ry="30" fill="rgba(255,255,255,0.1)"/><ellipse cx="600" cy="300" rx="60" ry="25" fill="rgba(255,255,255,0.08)"/><ellipse cx="800" cy="150" rx="70" ry="20" fill="rgba(255,255,255,0.12)"/><ellipse cx="400" cy="400" rx="50" ry="35" fill="rgba(255,255,255,0.06)"/><ellipse cx="900" cy="500" rx="90" ry="40" fill="rgba(255,255,255,0.1)"/></svg>') repeat top center;
+  animation: move-clouds 15s linear infinite;
+}
+
+@keyframes move-stars {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-1000px); }
+}
+
+@keyframes twinkle {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+@keyframes move-clouds {
+  from { transform: translateX(0px); }
+  to { transform: translateX(-1000px); }
+}
+
+.loading-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+}
+
+.logo-container {
+  margin-bottom: 2rem;
+}
+
+.logo {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.planet {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #8b6eda, #CFAAE8, #6a4c93);
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  box-shadow: 
+    0 0 30px rgba(139, 110, 218, 0.6),
+    inset 0 0 20px rgba(255, 255, 255, 0.2);
+  animation: planet-glow 2s ease-in-out infinite alternate;
+}
+
+.orbit {
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(139, 110, 218, 0.3);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: orbit-rotate 4s linear infinite;
+}
+
+.satellite {
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(45deg, #CFAAE8, #ffffff);
+  border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(207, 170, 232, 0.8);
+  animation: satellite-pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes planet-glow {
+  0% { box-shadow: 0 0 30px rgba(139, 110, 218, 0.6), inset 0 0 20px rgba(255, 255, 255, 0.2); }
+  100% { box-shadow: 0 0 50px rgba(139, 110, 218, 0.8), inset 0 0 30px rgba(255, 255, 255, 0.3); }
+}
+
+@keyframes orbit-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes satellite-pulse {
+  0% { transform: translateX(-50%) scale(1); box-shadow: 0 0 10px rgba(207, 170, 232, 0.8); }
+  100% { transform: translateX(-50%) scale(1.2); box-shadow: 0 0 20px rgba(207, 170, 232, 1); }
+}
+
+.loading-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #8b6eda, #CFAAE8, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(139, 110, 218, 0.5);
+}
+
+.loading-bar-container {
+  margin-bottom: 1.5rem;
+}
+
+.loading-bar {
+  width: 300px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.loading-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #8b6eda, #CFAAE8, #8b6eda);
+  border-radius: 2px;
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.loading-text {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  letter-spacing: 1px;
+  animation: text-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes text-glow {
+  0% { text-shadow: 0 0 5px rgba(139, 110, 218, 0.3); }
+  100% { text-shadow: 0 0 15px rgba(139, 110, 218, 0.6); }
+}
+
+@media (max-width: 768px) {
+  .loading-title {
+    font-size: 2rem;
+  }
+  
+  .loading-bar {
+    width: 250px;
+  }
+  
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .planet {
+    width: 60px;
+    height: 60px;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .orbit {
+    width: 100px;
+    height: 100px;
+  }
+}

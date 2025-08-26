@@ -1,5 +1,6 @@
 import Script from 'next/script';
-import { NoSSR } from './packages/ui/components/NoSSR';
+import { LoadingWrapper } from './packages/components/loading/loading-wrapper';
+import './packages/ui/styles/globals.scss';
 
 export const metadata = {
   title: 'Lunaris Tech - Transformando ideias em soluções digitais',
@@ -85,7 +86,9 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning>
-        {children}
+        <LoadingWrapper>
+          {children}
+        </LoadingWrapper>
       </body>
     </html>
   );
