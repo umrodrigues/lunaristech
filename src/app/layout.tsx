@@ -69,6 +69,24 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning>
       <head>
         <Script
+          id="gtm-script"
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17510765186"
+        />
+        <Script
+          id="gtm-config"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17510765186');
+            `,
+          }}
+        />
+        
+        <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-EESB3Q218S"
         />
