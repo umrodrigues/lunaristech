@@ -25,9 +25,9 @@ export const workMock = [
   },
   {
   id: 4,
-  title: 'Rc Enfermagem - Em construção',
+  title: 'Rc Enfermagem',
   description: 'Plataforma institucional da Rc Enfermagem, desenvolvida em Next.js com TypeScript. O projeto está em construção e visa fornecer informações e serviços voltados à área da saúde.',
-  image: '/ecenfermagem.png',
+  image: '/rcenf.jpg',
   techIcons: ['FaReact', 'SiNextdotjs'],
   link: 'https://rcenfermagemparavoce.com.br',
 },
@@ -46,5 +46,15 @@ export const workMock = [
   image: '/lhc.png',
   techIcons: ['FaHtml5', 'FaCss3'],
   link: 'https://www.demolidoralhc.com.br/index.html',
-}
+},
+{
+  id: 7,
+  title: 'Br Planejados',
+  description: 'Landing page voltado para a venda de imóveis, desenvolvido com Next.js e TypeScript.',
+  image: '/brplan.jpg',
+  techIcons: ['FaReact', 'SiNextdotjs'],
+  link: 'https://www.brplanejado.com.br',
+},
 ];
+
+export const workOrder = [7, 4, 3, 2, 5, 6, 1];

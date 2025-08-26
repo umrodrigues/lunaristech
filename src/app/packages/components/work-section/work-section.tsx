@@ -5,7 +5,7 @@ import { SiPostgresql, SiNextdotjs } from 'react-icons/si';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './WorkSection.module.scss';
-import { workMock } from './__mocks__/workMock';
+import { workMock, workOrder } from './__mocks__/workMock';
 
 import type { IconType } from 'react-icons';
 
@@ -21,11 +21,15 @@ const iconMap: Record<string, IconType> = {
 };
 
 export default function WorkSection() {
+  const orderedWork = workOrder
+    .map(id => workMock.find(item => item.id === id))
+    .filter((item): item is NonNullable<typeof item> => item !== undefined);
+
   return (
     <section id="portifolio" className={styles.workSection}>
       <h2>Conheça os nossos projetos</h2>
       <div className={styles.cardsContainer}>
-        {workMock.map(({ id, title, description, image, techIcons, link }) => (
+        {orderedWork.map(({ id, title, description, image, techIcons, link }) => (
           <div className={styles.card} key={id}>
             <div className={styles.imageWrapper}>
               <Image
@@ -41,7 +45,7 @@ export default function WorkSection() {
               <h3>{title}</h3>
               <p>{description}</p>
               <div className={styles.techIcons}>
-                {techIcons.map((iconName) => {
+                {techIcons.map((iconName: string) => {
                   const IconComponent = iconMap[iconName];
                   return IconComponent ? <IconComponent key={iconName} size={26} /> : null;
                 })}
