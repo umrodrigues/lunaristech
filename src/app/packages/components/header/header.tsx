@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Header.module.scss';
+import { NoSSR } from '../../ui/components/NoSSR';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ export default function Header() {
     <header className={styles.header}>
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
-          <Image src="/logo-lunaris.png" alt="Lunaris Tech" width={280} height={100} />
+          <Image src="/images/branding/logo-lunaris.png" alt="Lunaris Tech" width={280} height={100} />
         </Link>
 
         <nav className={styles.desktopNav}>
@@ -36,21 +37,23 @@ export default function Header() {
         </button>
       </div>
 
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            className={styles.mobileMenu}
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-          >
-            <Link href="#empresa" onClick={() => setMenuOpen(false)}>Empresa</Link>
-            <Link href="#servicos" onClick={() => setMenuOpen(false)}>Serviços</Link>
-            <Link href="#portifolio" onClick={() => setMenuOpen(false)}>Portifólio</Link>
-            <Link href="#contato" onClick={() => setMenuOpen(false)}>Contato</Link>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <NoSSR>
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              className={styles.mobileMenu}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+            >
+              <Link href="#empresa" onClick={() => setMenuOpen(false)}>Empresa</Link>
+              <Link href="#servicos" onClick={() => setMenuOpen(false)}>Serviços</Link>
+              <Link href="#portifolio" onClick={() => setMenuOpen(false)}>Portifólio</Link>
+              <Link href="#contato" onClick={() => setMenuOpen(false)}>Contato</Link>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </NoSSR>
     </header>
   );
 }

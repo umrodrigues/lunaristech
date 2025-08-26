@@ -21,7 +21,7 @@ export default function Footer() {
             <FaWhatsapp size={24} />
           </Link>
         </div>
-        <p className={styles.copy}>© {new Date().getFullYear()} Lunaris Tech. Todos os direitos reservados.</p>
+        <p className={styles.copy}>© 2024 Lunaris Tech. Todos os direitos reservados.</p>
       </div>
     </footer>
   );

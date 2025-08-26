@@ -5,7 +5,9 @@ import styles from './GoToWhatsapp.module.scss';
 
 export const GoToWhatsapp = () => {
   const handleClick = () => {
-    window.open('https://api.whatsapp.com/send?phone=5551997791996', '_blank');
+    if (typeof window !== 'undefined') {
+      window.open('https://api.whatsapp.com/send?phone=5551997791996', '_blank');
+    }
   };
 
   return (

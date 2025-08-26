@@ -1,11 +1,63 @@
 import Script from 'next/script';
-import GoogleAnalyticsRouter from './packages/ui/analytics/analytics-router';
+import { NoSSR } from './packages/ui/components/NoSSR';
 
 export const metadata = {
-  title: 'Lunaris Tech',
-  description: 'Tecnologia e inovação sob medida.',
+  title: 'Lunaris Tech - Transformando ideias em soluções digitais',
+  description: 'Somos a Lunaris Tech — apaixonados por tecnologia e inovação. Transformamos ideias em soluções digitais com excelência, agilidade e impacto.',
+  keywords: 'desenvolvimento web, aplicativos mobile, soluções digitais, tecnologia, inovação, Next.js, React, TypeScript',
+  authors: [{ name: 'Lunaris Tech' }],
+  creator: 'Lunaris Tech',
+  publisher: 'Lunaris Tech',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://lunaristech.com.br'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Lunaris Tech - Transformando ideias em soluções digitais',
+    description: 'Somos a Lunaris Tech — apaixonados por tecnologia e inovação. Transformamos ideias em soluções digitais com excelência, agilidade e impacto.',
+    url: 'https://lunaristech.com.br',
+    siteName: 'Lunaris Tech',
+    images: [
+      {
+        url: '/images/branding/logo-lunaris.png',
+        width: 1200,
+        height: 630,
+        alt: 'Lunaris Tech Logo',
+      },
+    ],
+    locale: 'pt_BR',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Lunaris Tech - Transformando ideias em soluções digitais',
+    description: 'Somos a Lunaris Tech — apaixonados por tecnologia e inovação. Transformamos ideias em soluções digitais com excelência, agilidade e impacto.',
+    images: ['/images/branding/logo-lunaris.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
-    icon: '/favicon.ico',
+    icon: '/images/branding/favicon.ico',
+    shortcut: '/images/branding/favicon.ico',
+    apple: '/images/branding/favicon.ico',
+  },
+  manifest: '/manifest.json',
+  verification: {
+    google: 'G-EESB3Q218S',
   },
 };
 
@@ -13,7 +65,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
         <Script
           strategy="afterInteractive"
@@ -32,8 +84,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>
-        <GoogleAnalyticsRouter />
+      <body suppressHydrationWarning>
         {children}
       </body>
     </html>
