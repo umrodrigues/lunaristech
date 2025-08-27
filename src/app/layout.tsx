@@ -102,6 +102,17 @@ export default function RootLayout({
             `,
           }}
         />
+        
+        {/* Event snippet for Clique de saída conversion page */}
+        <Script
+          id="conversion-event"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              gtag('event', 'conversion', {'send_to': 'AW-17510765186/1UfRCPXW8I4bEIKl5J1B'});
+            `,
+          }}
+        />
       </head>
       <body suppressHydrationWarning>
         <LoadingWrapper>
