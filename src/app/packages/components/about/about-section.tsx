@@ -29,8 +29,15 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          Somos a Lunaris Tech — apaixonados por tecnologia e inovação. Transformamos ideias em soluções digitais com excelência, agilidade e impacto.
-                  </motion.p>
+          Somos a Lunaris Tech — um estúdio de tecnologia que combina estratégia digital, design e engenharia para criar produtos que fazem diferença. Atuamos em todo o ciclo, da ideação à sustentação, conectando negócios a experiências digitais de verdade.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          Entregamos plataformas web, aplicativos, automações inteligentes e integrações sob medida, sempre guiados por dados e pela agilidade de um time que gosta de resolver problemas complexos. Com a Lunaris, cada projeto ganha brilho próprio.
+        </motion.p>
         </NoSSR>
     </section>
   );

@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './ServicesSection.module.scss';
-import { FaLaptopCode, FaMobileAlt, FaBrain, FaCloud } from 'react-icons/fa';
+import { FaLaptopCode, FaMobileAlt, FaBrain, FaCloud, FaCogs, FaRocket } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { NoSSR } from '../../ui/components/NoSSR';
 
@@ -9,22 +9,32 @@ const services = [
   {
     icon: <FaLaptopCode size={28} />,
     title: 'Web Experience',
-    description: 'Desenvolvimento de sites modernos, rápidos e responsivos com foco em performance.',
+    description: 'Experiências digitais rápidas, acessíveis e alinhadas à identidade da sua marca.',
   },
   {
     icon: <FaMobileAlt size={28} />,
     title: 'Aplicativos Mobile',
-    description: 'Apps para iOS e Android com interfaces fluidas e experiências encantadoras.',
+    description: 'Apps nativos e híbridos com jornadas fluidas e recursos pensados para retenção.',
   },
   {
     icon: <FaBrain size={28} />,
     title: 'Soluções Inteligentes',
-    description: 'Aplicação de tecnologia e IA para automação e inovação de processos.',
+    description: 'Serviços guiados por dados e IA para personalizar experiências e gerar novos insights.',
+  },
+  {
+    icon: <FaCogs size={28} />,
+    title: 'Automação Digital',
+    description: 'Fluxos automatizados, integrações low-code e bots que reduzem tarefas repetitivas.',
   },
   {
     icon: <FaCloud size={28} />,
     title: 'Integrações & APIs',
-    description: 'Conectamos sistemas e criamos soluções escaláveis com integrações eficientes.',
+    description: 'Infraestrutura conectada com APIs escaláveis, monitoração contínua e observabilidade.',
+  },
+  {
+    icon: <FaRocket size={28} />,
+    title: 'Evolução Contínua',
+    description: 'Operação assistida, otimizações recorrentes e squads para acelerar novos ciclos de entrega.',
   },
 ];
 

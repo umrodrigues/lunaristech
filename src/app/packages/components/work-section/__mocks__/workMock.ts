@@ -55,6 +55,22 @@ export const workMock = [
   techIcons: ['FaReact', 'SiNextdotjs'],
   link: 'https://www.brplanejado.com.br',
 },
+{
+  id: 8,
+  title: 'Econti Fotos',
+  description: 'E-commerce de fotos com reconhecimento automático de rostos para facilitar a compra. IA identifica visitantes em eventos e entrega sugestões personalizadas.',
+  image: '/images/projects/econti-fotos.png',
+  techIcons: ['FaReact', 'SiNextdotjs', 'FaBrain'],
+  link: 'https://compresuafotocomigo.com.br/',
+},
+{
+  id: 9,
+  title: 'Manager Tributário',
+  description: 'Plataforma web que centraliza cálculos e inteligência fiscal para equipes contábeis, com dashboards e trilhas de atualização tributária em tempo real.',
+  image: '/images/projects/manager.png',
+  techIcons: ['FaReact', 'SiNextdotjs'],
+  link: 'https://www.managertributario.com.br/',
+},
 ];
 
-export const workOrder = [7, 4, 3, 2, 5, 6, 1];
+export const workOrder = [8, 9, 7, 4, 3, 2, 5, 6, 1];

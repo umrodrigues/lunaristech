@@ -1,6 +1,6 @@
 'use client';
 
-import { FaReact, FaNodeJs, FaLaravel, FaCss3, FaHtml5, FaWordpress } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaLaravel, FaCss3, FaHtml5, FaWordpress, FaBrain } from 'react-icons/fa';
 import { SiPostgresql, SiNextdotjs } from 'react-icons/si';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,6 +18,7 @@ const iconMap: Record<string, IconType> = {
   FaCss3,
   FaHtml5,
   FaWordpress,
+  FaBrain,
 };
 
 export default function WorkSection() {
